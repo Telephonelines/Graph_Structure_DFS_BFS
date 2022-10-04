@@ -22,7 +22,6 @@ public class DFS {
             root = stack.pop();
             reachable.add(root);
             for (int i : g.neighbours(root)) {
-                //a = i;
                 if(!visited[i]) {
                     visited[i] = true;
                     stack.push(i);
