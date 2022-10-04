@@ -23,7 +23,6 @@ public class BFS {
             root = queue.poll();
             reachable.add(root);
             for (int i : g.neighbours(root)) {
-                //a = i;
                 if (!visited[i]) {
                     visited[i] = true;
                     queue.add(i);
