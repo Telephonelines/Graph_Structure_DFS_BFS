@@ -1,15 +1,6 @@
 import java.util.*;
 
 public class Graph {
-    /*static boolean connected(Vertex a, Vertex b, ArrayList<Edge> edges, ArrayList<Vertex> vertices) {
-        for (Edge e : edges) {
-            if ((e.getA()== a && e.getB() == b) || (e.getA() == b && e.getB() == a)) {
-                return true;
-            }
-        }
-        return false;
-    }*/
-
     LinkedList<Integer>[] graph;
     boolean directed;
 
@@ -25,7 +16,7 @@ public class Graph {
             graph[i] = new LinkedList<>();
         }
     }
-
+//    Built in bfs and dfs methods
 //    public ArrayList<Integer> bfs(int s) {
 //        int N = size();
 //        ArrayList<Integer> reachable = new ArrayList<>();
@@ -113,22 +104,6 @@ public class Graph {
     }
 
     public static void main(String[] args) {
-        /*ArrayList<Vertex> vertices = new ArrayList<>();
-        ArrayList<Edge> edges = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            vertices.add(new Vertex(i + 1));
-        }
-        edges.add(new Edge(vertices.get(0), vertices.get(1), 12));
-        edges.add(new Edge(vertices.get(1), vertices.get(2), 9));
-        edges.add(new Edge(vertices.get(2), vertices.get(3), 11));
-        edges.add(new Edge(vertices.get(3), vertices.get(4), 27));
-        edges.add(new Edge(vertices.get(4), vertices.get(2), 10));
-        edges.add(new Edge(vertices.get(5), vertices.get(2), 27));
-
-        System.out.println(connected(vertices.get(0), vertices.get(1), edges, vertices));
-        System.out.println(connected(vertices.get(1), vertices.get(0), edges, vertices));
-        System.out.println(connected(vertices.get(0), vertices.get(2), edges, vertices));*/
-
         Graph g = new Graph(20);
         System.out.println(g);
         g.addEdge(0, 1);
@@ -142,8 +117,5 @@ public class Graph {
         g.removeEdge(0, 1);
         System.out.println(g.neighbours(0));
         System.out.println(g.neighbours(1));
-
-//        System.out.println(g.bfs(0));
-//        System.out.println(g.dfs(0));
     }
 }
